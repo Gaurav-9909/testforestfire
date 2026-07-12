@@ -1,9 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Flask Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forest Fire Prediction</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:linear-gradient(135deg,#ff512f,#dd2476);
+        }
+
+        .container{
+            background:white;
+            padding:50px;
+            border-radius:15px;
+            text-align:center;
+            box-shadow:0 10px 30px rgba(0,0,0,0.3);
+            width:500px;
+        }
+
+        h1{
+            color:#333;
+            margin-bottom:20px;
+        }
+
+        p{
+            color:#555;
+            font-size:18px;
+            margin-bottom:35px;
+        }
+
+        .btn{
+            display:inline-block;
+            text-decoration:none;
+            background:#007BFF;
+            color:white;
+            padding:15px 35px;
+            border-radius:8px;
+            font-size:20px;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background:#0056b3;
+            transform:scale(1.05);
+        }
+
+    </style>
+
 </head>
+
 <body>
-    <h1>Flask is Working!</h1>
+
+<div class="container">
+
+    <h1>🔥 Forest Fire Weather Index Prediction</h1>
+
+    <p>
+        Welcome! Predict the Fire Weather Index using weather parameters
+        with our Machine Learning model.
+    </p>
+
+    <a href="{{ url_for('predict_datapoint') }}" class="btn">
+        Let's Go →
+    </a>
+
+</div>
+
 </body>
+
 </html>
